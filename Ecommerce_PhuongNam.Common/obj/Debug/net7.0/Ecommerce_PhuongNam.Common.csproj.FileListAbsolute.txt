@@ -1,0 +1,12 @@
+D:\Nam4\HK2\Ecommerce_PhuongNam\Ecommerce_PhuongNam.Common\bin\Debug\net7.0\Ecommerce_PhuongNam.Common.deps.json
+D:\Nam4\HK2\Ecommerce_PhuongNam\Ecommerce_PhuongNam.Common\bin\Debug\net7.0\Ecommerce_PhuongNam.Common.dll
+D:\Nam4\HK2\Ecommerce_PhuongNam\Ecommerce_PhuongNam.Common\bin\Debug\net7.0\Ecommerce_PhuongNam.Common.pdb
+D:\Nam4\HK2\Ecommerce_PhuongNam\Ecommerce_PhuongNam.Common\obj\Debug\net7.0\Ecommerce_PhuongNam.Common.csproj.AssemblyReference.cache
+D:\Nam4\HK2\Ecommerce_PhuongNam\Ecommerce_PhuongNam.Common\obj\Debug\net7.0\Ecommerce_PhuongNam.Common.GeneratedMSBuildEditorConfig.editorconfig
+D:\Nam4\HK2\Ecommerce_PhuongNam\Ecommerce_PhuongNam.Common\obj\Debug\net7.0\Ecommerce_PhuongNam.Common.AssemblyInfoInputs.cache
+D:\Nam4\HK2\Ecommerce_PhuongNam\Ecommerce_PhuongNam.Common\obj\Debug\net7.0\Ecommerce_PhuongNam.Common.AssemblyInfo.cs
+D:\Nam4\HK2\Ecommerce_PhuongNam\Ecommerce_PhuongNam.Common\obj\Debug\net7.0\Ecommerce_PhuongNam.Common.csproj.CoreCompileInputs.cache
+D:\Nam4\HK2\Ecommerce_PhuongNam\Ecommerce_PhuongNam.Common\obj\Debug\net7.0\Ecommerce_PhuongNam.Common.dll
+D:\Nam4\HK2\Ecommerce_PhuongNam\Ecommerce_PhuongNam.Common\obj\Debug\net7.0\refint\Ecommerce_PhuongNam.Common.dll
+D:\Nam4\HK2\Ecommerce_PhuongNam\Ecommerce_PhuongNam.Common\obj\Debug\net7.0\Ecommerce_PhuongNam.Common.pdb
+D:\Nam4\HK2\Ecommerce_PhuongNam\Ecommerce_PhuongNam.Common\obj\Debug\net7.0\ref\Ecommerce_PhuongNam.Common.dll
