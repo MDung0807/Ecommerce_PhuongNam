@@ -1,5 +1,6 @@
 ﻿using Ecommerce_PhuongNam.Address.Address.Domain.Entities;
 using Ecommerce_PhuongNam.Address.Address.Infrastructure.EntityEF.Configs;
+using Ecommerce_PhuongNam.Common.CurrentUserService;
 using Ecommerce_PhuongNam.Common.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
@@ -8,8 +9,10 @@ namespace Ecommerce_PhuongNam.Address.Address.Infrastructure.EntityEF;
 
 public class AddressDbContext : DbContext
 {
-    public AddressDbContext(DbContextOptions<AddressDbContext> options) : base(options)
+    private readonly ICurrentUserService _currentUserService;
+    public AddressDbContext(DbContextOptions<AddressDbContext> options, ICurrentUserService currentUserService) : base(options)
     {
+        _currentUserService = currentUserService;
     }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -34,8 +37,8 @@ public class AddressDbContext : DbContext
             switch (entry.State)
             {
                 case EntityState.Added:
-                    entry.Entity.CreateBy = "";
-                    entry.Entity.UpdateBy = "";
+                    entry.Entity.CreateBy = _currentUserService.IdUser;
+                    entry.Entity.UpdateBy = _currentUserService.IdUser;
                     entry.Entity.DateCreate = DateTime.Now;
                     entry.Entity.DateUpdate = DateTime.Now;
                     break;
@@ -44,7 +47,7 @@ public class AddressDbContext : DbContext
                     entry.Property(x => x.DateCreate).IsModified = false;
                     entry.Property(x => x.CreateBy).IsModified = false;
                     entry.Entity.DateUpdate = DateTime.Now;
-                    entry.Entity.UpdateBy = "";
+                    entry.Entity.UpdateBy = _currentUserService.IdUser;
                     break;
             }
         }

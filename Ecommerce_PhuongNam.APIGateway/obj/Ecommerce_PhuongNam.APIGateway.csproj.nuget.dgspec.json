@@ -46,6 +46,12 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
+          "dependencies": {
+            "Ocelot": {
+              "target": "Package",
+              "version": "[22.0.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

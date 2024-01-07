@@ -1,11 +1,10 @@
 ﻿using System.Collections;
 using Ecommerce_PhuongNam.Address.Address.Infrastructure.EntityEF;
-using Ecommerce_PhuongNam.Address.Address.Infrastructure.Repositories;
 using Ecommerce_PhuongNam.Common.Entities;
 using Ecommerce_PhuongNam.Common.Repositories.Interfaces;
 using Microsoft.EntityFrameworkCore.Storage;
 
-namespace BusBookTicket.Core.Infrastructure;
+namespace Ecommerce_PhuongNam.Address.Address.Infrastructure.Repositories;
 
 public class UnitOfWork : IUnitOfWork, IAsyncDisposable
 {
@@ -43,10 +42,10 @@ public class UnitOfWork : IUnitOfWork, IAsyncDisposable
 
         if (!_repositories.ContainsKey(type))
         {
-            var repositoryType = typeof(GenericRepository<T, TId>);
+            var repositoryType = typeof(GenericRepository<,>);
+            var constructedType = repositoryType.MakeGenericType(typeof(T), typeof(TId));
 
-            var repositoryInstance =
-                Activator.CreateInstance(repositoryType.MakeGenericType(typeof(T)), _context);
+            var repositoryInstance = Activator.CreateInstance(constructedType, _context);
 
             _repositories.Add(type, repositoryInstance);
         }

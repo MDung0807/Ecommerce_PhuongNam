@@ -1,8 +1,21 @@
 {
   "version": 2,
-  "dgSpecHash": "23MulIsZrPOxWXaZb0xVxxWE/rW6QDLeG45hpVBnxCY820G6UOoaFH/GFxiUeWQDTHKHDijx+nsWlWq8NbcjqA==",
+  "dgSpecHash": "0Bhe1jUv8lU6m+skYnQfIqvW6u3TLbE5/JTHVXSIBg/8bAJhN7vnD8tbUq99PyKjTYZcz6YTUCF3CEcXXz1LyA==",
   "success": true,
   "projectFilePath": "D:\\Nam4\\HK2\\Ecommerce_PhuongNam\\Ecommerce_PhuongNam.APIGateway\\Ecommerce_PhuongNam.APIGateway.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\dodung\\.nuget\\packages\\fluentvalidation\\11.8.0\\fluentvalidation.11.8.0.nupkg.sha512",
+    "C:\\Users\\dodung\\.nuget\\packages\\ipaddressrange\\6.0.0\\ipaddressrange.6.0.0.nupkg.sha512",
+    "C:\\Users\\dodung\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\7.0.14\\microsoft.aspnetcore.jsonpatch.7.0.14.nupkg.sha512",
+    "C:\\Users\\dodung\\.nuget\\packages\\microsoft.aspnetcore.middlewareanalysis\\7.0.14\\microsoft.aspnetcore.middlewareanalysis.7.0.14.nupkg.sha512",
+    "C:\\Users\\dodung\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\7.0.14\\microsoft.aspnetcore.mvc.newtonsoftjson.7.0.14.nupkg.sha512",
+    "C:\\Users\\dodung\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\dodung\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\dodung\\.nuget\\packages\\microsoft.extensions.diagnosticadapter\\3.1.32\\microsoft.extensions.diagnosticadapter.3.1.32.nupkg.sha512",
+    "C:\\Users\\dodung\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\dodung\\.nuget\\packages\\newtonsoft.json.bson\\1.0.2\\newtonsoft.json.bson.1.0.2.nupkg.sha512",
+    "C:\\Users\\dodung\\.nuget\\packages\\ocelot\\22.0.1\\ocelot.22.0.1.nupkg.sha512",
+    "C:\\Users\\dodung\\.nuget\\packages\\system.diagnostics.diagnosticsource\\4.7.1\\system.diagnostics.diagnosticsource.4.7.1.nupkg.sha512"
+  ],
   "logs": []
 }

@@ -2,7 +2,7 @@
 
 namespace Ecommerce_PhuongNam.Address.Address.Domain.Entities;
 
-public class District : BaseEntity<Guid>
+public class District : BaseEntity<int>
 {
     #region -- Properties --
 

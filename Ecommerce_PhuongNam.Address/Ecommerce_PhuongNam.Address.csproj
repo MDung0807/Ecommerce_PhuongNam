@@ -13,10 +13,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Address.API\" />
-    </ItemGroup>
-
-    <ItemGroup>
       <PackageReference Include="AutoMapper" Version="12.0.0" />
       <PackageReference Include="FluentValidation" Version="11.9.0" />
       <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
@@ -31,6 +27,10 @@
 
     <ItemGroup>
       <ProjectReference Include="..\Ecommerce_PhuongNam.Common\Ecommerce_PhuongNam.Common.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Address.Application\Services\" />
     </ItemGroup>
 
 </Project>
