@@ -31,7 +31,7 @@ public interface IUnitOfWork : IDisposable
     /// </summary>
     /// <typeparam name="T">Is Entity, T: BaseEntity</typeparam>
     /// <returns></returns>
-    IGenericRepository<T> GenericRepository<T>() where T : BaseEntity;
+    IGenericRepository<T, TId> GenericRepository<T, TId>() where T : BaseEntity<TId>;
     
     /// <summary>
     /// Complete activity

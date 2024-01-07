@@ -2,9 +2,10 @@
 
 namespace Ecommerce_PhuongNam.Common.Entities;
 
-public class BaseEntity : IEntity
+
+public class BaseEntity<T> : IEntity<T>
 {
-    public string Id { get; set; }
+    public T Id {get; set;}
     public DateTime DateCreate { get; set; }
     public DateTime DateUpdate { get; set; }
     public int Status { get; set; }

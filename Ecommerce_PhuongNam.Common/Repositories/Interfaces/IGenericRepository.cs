@@ -9,7 +9,7 @@ namespace Ecommerce_PhuongNam.Common.Repositories.Interfaces;
 /// </summary>
 /// <typeparam name="T">T is Entity</typeparam>
 
-public interface IGenericRepository<T>: IRepository<T> where T : BaseEntity
+public interface IGenericRepository<T, TId>: IRepository<T, TId> where T : BaseEntity<TId>
 {
     /// <summary>
     /// Get data from database use specification

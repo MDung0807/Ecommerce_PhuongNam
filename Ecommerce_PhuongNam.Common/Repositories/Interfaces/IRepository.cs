@@ -8,7 +8,8 @@ namespace Ecommerce_PhuongNam.Common.Repositories.Interfaces
     /// Communication with database
     /// </summary>
     /// <typeparam name="T">Entity</typeparam>
-    public interface IRepository<T> where T: BaseEntity
+    /// <typeparam name="TId"></typeparam>
+    public interface IRepository<T, TId> where T: BaseEntity<TId>
     {
         /// <summary>
         /// Update Entity

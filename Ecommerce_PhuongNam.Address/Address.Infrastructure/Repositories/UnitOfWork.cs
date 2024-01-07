@@ -9,12 +9,12 @@ namespace BusBookTicket.Core.Infrastructure;
 
 public class UnitOfWork : IUnitOfWork, IAsyncDisposable
 {
-    private readonly AppDbContext _context;
+    private readonly AddressDbContext _context;
     private IDbContextTransaction _transaction;
     private Hashtable _repositories;
     
 
-    public UnitOfWork(AppDbContext context)
+    public UnitOfWork(AddressDbContext context)
     {
         _context = context;
     }
@@ -34,7 +34,7 @@ public class UnitOfWork : IUnitOfWork, IAsyncDisposable
         await DisposeAsync();
     }
 
-    public IGenericRepository<T> GenericRepository<T>() where T : BaseEntity
+    public IGenericRepository<T, TId> GenericRepository<T, TId>() where T : BaseEntity<TId>
     {
         if (_repositories == null)
             _repositories = new Hashtable();
@@ -43,7 +43,7 @@ public class UnitOfWork : IUnitOfWork, IAsyncDisposable
 
         if (!_repositories.ContainsKey(type))
         {
-            var repositoryType = typeof(GenericRepository<>);
+            var repositoryType = typeof(GenericRepository<T, TId>);
 
             var repositoryInstance =
                 Activator.CreateInstance(repositoryType.MakeGenericType(typeof(T)), _context);
@@ -51,7 +51,7 @@ public class UnitOfWork : IUnitOfWork, IAsyncDisposable
             _repositories.Add(type, repositoryInstance);
         }
 
-        return (IGenericRepository<T>)_repositories[type];
+        return (IGenericRepository<T, TId>)_repositories[type];
     }
 
     public async Task<int> Complete()

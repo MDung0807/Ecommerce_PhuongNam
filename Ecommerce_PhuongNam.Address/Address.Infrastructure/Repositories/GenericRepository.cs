@@ -14,15 +14,15 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Ecommerce_PhuongNam.Address.Address.Infrastructure.Repositories;
 
-public class GenericRepository<T> : IGenericRepository<T> where T : BaseEntity
+public class GenericRepository<T, TId> : IGenericRepository<T, TId> where T : BaseEntity<TId>
 {
     #region -- Properties --
 
-    private readonly AppDbContext _context;
+    private readonly AddressDbContext _context;
     private readonly DbSet<T> _dbSet;
     #endregion -- Properties --
 
-    public GenericRepository(AppDbContext context)
+    public GenericRepository(AddressDbContext context)
     {
         this._context = context;
         this._dbSet = context.Set<T>();
@@ -203,7 +203,7 @@ public class GenericRepository<T> : IGenericRepository<T> where T : BaseEntity
     #region -- Private Method --
     private IQueryable<T> ApplySpecification(ISpecification<T> specifications)
     {
-        return SpecificationEvaluator<T>.GetQuery(_dbSet.AsQueryable(), specifications, _dbSet);
+        return SpecificationEvaluator<T, TId>.GetQuery(_dbSet.AsQueryable(), specifications, _dbSet);
     }
 
     private void CheckStatus(T data, bool checkStatus = true)

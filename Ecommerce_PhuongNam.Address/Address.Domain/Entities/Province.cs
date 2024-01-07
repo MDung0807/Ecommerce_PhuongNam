@@ -1,7 +1,7 @@
 ﻿using Ecommerce_PhuongNam.Common.Entities;
 
 namespace Ecommerce_PhuongNam.Address.Address.Domain.Entities;
-public class Province : BaseEntity  
+public class Province : BaseEntity<Guid>
 {
     #region -- Properties --
 
